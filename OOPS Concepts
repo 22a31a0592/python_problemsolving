@@ -1,0 +1,116 @@
+#OOPS concepts
+"""class Car:
+    def __init__(self,brand,fuel_type):
+        self.brand=brand
+        self.fuel_type=fuel_type
+
+    def car_details(self,milage:float):
+        print(f"This is {self.brand} car and is {self.fuel_type} car and has a milage of {milage} kmph")
+
+car1=Car(brand="Benz",fuel_type="Disel")
+car2=Car(brand="Porsche",fuel_type="Petrol")
+
+car1.car_details(16)
+car2.car_details(8)
+"""
+#Inheritance
+#                     SINGLE INHERITANCE
+"""
+class vehicle:
+    def start(self):
+        print("Vehicle has started.")
+class car(vehicle):
+    def drive(self):
+        print("Car is driving.")
+car=car()
+car.start()
+car.drive()"""
+#                   MULTIPLE INHERITANCE
+"""
+class engine:
+    def engine_type(self):
+        print("Vehicle has started.")
+class Wheels:
+    def number_of_wheels(self):
+        print("This Vehicle has four wheels.")
+class truck(engine,Wheels):
+    pass
+truck=truck()
+truck.engine_type()
+truck.number_of_wheels()"""
+#     MULTILEVEL INHERITANCE
+"""
+class Animal:
+    def eat(self):
+        print("Animal is eating.")
+class Mammal(Animal):
+    def walk(self):
+        print("Mammal is walking.")
+class Dog(Mammal):
+    def bark(self):
+        print("Dog is barking.")
+dog=Dog()
+dog.eat()
+dog.walk()
+dog.bark()"""
+#                   HYBRID INHERITANCE
+"""
+class vehicle:
+    def description(self):
+        print("This is vehicle.")
+class Engine:
+    def engine_type(self):
+        print("Engine type is diesel.")
+class car(vehicle,Engine):
+    def wheels(self):
+        print("Car has four wheels.")
+car=car()
+car.description()
+car.engine_type()
+"""
+#                 HIERARCHIAL INHERITANCE
+"""
+class shape:
+    def area(self):
+        print("calculating area")
+class circle(shape):
+    def area(self):
+        print("Area of circle:pi*r*r")
+class Rectangle(shape):
+    def area(self):
+        print("Area of Rectangle:length*breadth")
+circle=circle()
+Rectangle=Rectangle()
+circle.area()
+Rectangle.area()
+"""
+#              PASSWORD 
+"""
+class User:
+    def __init__(self,username,password):
+        self._username=username
+        self.__password=password
+    def get_username(self):
+        return self._username
+    def set_password(self,new_password):
+        self.__password=new_password
+        print("password updated successfully!")
+    def login(self,username,password):
+        return self._username==username and self.__password==password
+user=User(username="gowthu",password="123456")
+username=input("Enter username:")
+password = input("Enter password: ")
+
+if user.login(username, password):
+    print(f"Welcome, {user.get_username()}!")
+else:
+    print("Invalid login details.")
+    option = input("Do you want to reset your password? (yes/no): ").lower()
+    if option == "yes":
+        new_password = input("Enter your new password: ")
+        user.set_password(new_password)
+    else:
+        print("Goodbye!")
+
+# -(single underscore)=protected,--(double underscore)=private
+"""     
