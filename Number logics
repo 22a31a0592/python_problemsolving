@@ -1,0 +1,159 @@
+"""a,b=map(int,input("enter the values:").split())
+n=0
+while a<=b:
+    a*=3
+    b*=2
+    n+=1
+print(n)"""
+
+"""n,m,a,b=map(int,input("enter the values:").split())
+if a*m<b:
+    print(n*a)
+else:
+    print((n//m)*b+min(n%m*a,b))"""
+
+"""n=int(input("enter value:"))
+temp1=n
+temp2=n
+c=0
+arm=0
+while temp1:
+    temp1//10
+    c+=1
+while temp2:
+    d=temp2%10
+    arm=arm+d**c
+    temp2=temp2//10
+if arm==n:
+    print("armstrong")
+else:
+    print("not armstrong")"""
+
+"""n= int(input("enter number"))
+c1,c2=0,0
+while(n>0):
+    d=n%10
+    if d%2==0:
+        c1+=1
+    else:
+        c2+=1
+    n=n//10
+print(c1)
+print(c2)
+ """
+"""                ARMSTRONG NUMBER
+def is_armstrong():
+    number=int(input("enter a number"))
+    digits = str(number)
+    n = len(digits)
+    armstrong_sum = sum(int(digit) ** n for digit in digits)
+    return armstrong_sum == number
+
+print(is_armstrong())  
+#print(is_armstrong(123))
+#print(is_armstrong(9474))
+"""
+
+"""n=int(input())
+if n<5:
+    print(1)
+elif n%5==0:
+    print(n//5)
+else:
+    print((n//5)+1)
+
+"""
+
+"""n,m=map(int,input().split())
+print(n//m+n%m)
+"""
+"""                method 1                                      method 2                           method 3                               method 4
+n=int(input())                                                 for i in range(2,(n//2)+1):          for i in range(1,n+1):              for i in range(2,int(n**0.5)+1):
+flag=0
+for i in range(2,n):
+    if n%i==0:
+        flag==1
+        break
+
+if flag==1:
+    print("not prime")
+else:
+    print("prime")
+
+"""
+"""
+n=int(input())
+m=n
+count=0
+while n:
+    n=n//10
+    count+=1
+   
+print(count)
+print(m)"""
+
+#usage of lists
+"""
+L1=input().split()
+L1.sort(key=len)
+print(L1)"""
+"""
+l=list(input().split())
+l1=[]
+for digit in l:
+    if l.count(digit)%2!=0 and digit not in l1:
+        l1.append(digit)
+print(l1)
+"""
+#doubt
+"""l=list(map(int,input().split()))
+l.sort()
+print(sum(l[-3:]))"""
+
+"""
+#doubt
+l=list(map(int,input().split()))
+l1=[]
+l2=[]
+l3=[]
+for i in l:
+    if i%2==0:
+        l1.append(sort(i))
+        i+=1
+    else:
+        l2.append(i)
+l1.reverse()
+l2.sort()
+l3=l1+l2
+print(l3)
+"""
+"""
+l=list(map(int,input().split()))
+l.sort()
+res=[]
+for i in l:
+    if i%2!=0:
+        res.append(i)
+    else:
+        res.insert(0,i)
+print(res)
+"""
+#print the sum of all odd num in even indices
+"""
+l=list(map(int,input().split()))
+s=0
+for i in range(len(l)):
+    if i%2==0 and l[i]%2!=0:
+        s+=l[i]
+print(s)"""
+#input:2 3 4 3 5 4 3 6 output:5
+"""
+l=list(map(int,input().split()))
+max=0
+count=0
+for i in l:
+    if i>max:
+        max=i
+        count+=1
+print(count)
+"""
