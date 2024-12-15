@@ -1,0 +1,171 @@
+#sum of n natural numbers
+"""n=int(input())
+sum=0
+for i in range(1,n+1):
+    sum+=i
+print(sum)"""
+
+#factorial                                                
+"""n=int(input())                                                                            
+def getFactorial(n):                                       
+    if n==0:                                                    
+        return 1                                                    
+    else:                                                       
+        return n*getFactorial(n-1)                                  
+print(getFactorial(n))"""    
+#1/n! program
+"""n=int(input())                                                                            
+def getFactorial(n):                                       
+    if n==0:                                                    
+        return 1                                                    
+    else:                                                       
+        return n*getFactorial(n-1)                                  
+fact=getFactorial(n)         
+result=1/fact                    
+print(result) """
+
+# print 1 to n
+"""
+def fun(a):
+    if a>0:
+        fun(a-1)
+        print(a)
+    return 0
+x=int(input("Enter the no:"))
+fun(x)
+
+#or
+def fun(a):
+    if a==0:
+        return 0
+    fun(a-1)
+    print(a)
+x=int(input("Enter the no:"))
+fun(x)
+"""
+"""def fun(a):
+    if a==0:
+        return 200
+    t=fun(a-1)
+    print(a)
+    return t
+     
+x=int(input("Enter the no:"))
+print(fun(x))"""
+
+# 5 4 3 2 1 0 1 2 3 4 5
+"""def sequence():
+
+    descending = list(range(5, -1, -1))  
+    ascending = list(range(1, 6))  
+    full_sequence = descending + ascending
+    print(" ".join(map(str,full_sequence)))
+
+sequence()
+"""
+# 5 3 1 3 5
+"""
+def sequence():
+
+    descending = list(range(5, -1, -2))  
+    ascending = list(range(3,6,2))  
+    full_sequence = descending + ascending
+    print(" ".join(map(str,full_sequence)))
+
+sequence()
+"""
+# 1 2 3 4 5 5 4 3 2 1
+"""
+def sequence():
+
+    descending = list(range(1,6,1))  
+    ascending = list(range(5,0,-1))  
+    full_sequence = descending + ascending
+    print(" ".join(map(str,full_sequence)))
+
+sequence()
+"""
+# 1 2 3 4 5 4 3 2 1
+"""
+def sequence():
+
+    descending = list(range(1,6,1))  
+    ascending = list(range(4,0,-1))  
+    full_sequence = descending + ascending
+    print(" ".join(map(str,full_sequence)))
+
+sequence()"""
+"""
+#4th question
+n=int(input())
+def factorial(n):
+    if n==0:
+        return 1
+    else:
+        return n*factorial(n-1)
+print(factorial(n))"""
+
+#5th question
+""" not worked
+n=int(input())
+def is_prime(n):
+    if n<=1:
+        return "not prime"
+    if n==2:
+        return "prime"
+    if n%2==0:
+        return "not prime"
+    return "prime"
+
+print(is_prime(n))"""
+
+#reverse using function
+"""
+def rev(n,re=0):
+    if n==0:
+        return re
+    else:
+        d=n%10
+        re=re*10+d
+        return rev(n//10,re)
+n=int(input("Enter a number:"))
+print(rev(n))
+"""
+#  Armstrong number
+"""
+n=int(input())
+s=str(n)
+def count(n):
+    if n==0:
+        return 1
+    else:
+        return len(s)
+def arm(n,count):
+    if n==0:
+        return 0
+    d=n%10
+    return d**count+arm(n//10,count)
+def armstrong(n):
+    c=count(n)
+    return n==arm(n,c)
+if armstrong(n):
+    print("armstrong number")
+else:
+    print("not armstrong number")
+
+print(count(n))"""
+#codeforces 1560A
+"""
+n=int(input())
+for _ in range(n):
+    k=int(input())
+    i=1
+    count=0
+    while(1):
+        if i%3!=0 and i%10!=3:
+            count+=1
+            if count==k:
+                print(i)
+                break
+        i+=1
+"""
